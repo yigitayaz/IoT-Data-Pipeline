@@ -14,3 +14,4 @@ This project is an **8-week practical roadmap** designed to build a distributed 
 - **Storage**: Raw data is stored in MongoDB, while aggregated metrics are saved in PostgreSQL.
 - **Monitoring & Visualization**: Grafana dashboards provide live insights and alerts based on sensor thresholds.
 - **Containerization & Orchestration**: All services run on Docker and are orchestrated via Kubernetes (tested locally on Minikube).
+![alt text](images/iot_architecture.png)
