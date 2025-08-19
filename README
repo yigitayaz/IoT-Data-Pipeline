@@ -1,0 +1,16 @@
+# Project Description: IoT Data Pipeline with Distributed Systems
+
+This project is an **8-week practical roadmap** designed to build a distributed IoT data pipeline from scratch. The goal is to simulate real-world scenarios where IoT devices stream continuous sensor data, which is then processed, stored, and visualized using distributed systems technologies. The project emphasizes hands-on experience with event streaming, real-time analytics, containerization, orchestration, and monitoring.
+
+## Objectives
+- Gain practical skills in **distributed systems engineering**.
+- Build an end-to-end IoT data pipeline using **Kafka, Flink, MongoDB, PostgreSQL, Grafana, Docker, and Kubernetes**.
+- Demonstrate ability to design, deploy, and operate scalable data processing systems.
+
+## Key Components
+- **Event Generation**: Python scripts simulate IoT devices producing random sensor data (temperature, humidity, etc.).
+- **Messaging Layer**: Apache Kafka handles event streaming between producers and consumers.
+- **Data Processing**: Apache Flink performs real-time windowed aggregation of sensor data.
+- **Storage**: Raw data is stored in MongoDB, while aggregated metrics are saved in PostgreSQL.
+- **Monitoring & Visualization**: Grafana dashboards provide live insights and alerts based on sensor thresholds.
+- **Containerization & Orchestration**: All services run on Docker and are orchestrated via Kubernetes (tested locally on Minikube).
