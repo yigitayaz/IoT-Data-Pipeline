@@ -6,6 +6,7 @@ import org.apache.kafka.clients.producer.RecordMetadata;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.core.JsonProcessingException;
 
 import java.util.Properties;
 import java.util.Random;
@@ -16,7 +17,6 @@ public class IoTProducer {
     private static final String TOPIC = "iot-sensor-data";
     private static final Random random = new Random();
     private static final ObjectMapper mapper = new ObjectMapper();
-
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         Properties props = new Properties();
         props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
@@ -35,7 +35,7 @@ public class IoTProducer {
             String json;
             try {
                 json = mapper.writeValueAsString(data);
-            } catch (com.fasterxml.jackson.core.JsonProcessingException e) {
+            } catch (JsonProcessingException e) {
                 e.printStackTrace();
                 continue;
             }
@@ -52,6 +52,7 @@ public class IoTProducer {
 
         producer.close();
     }
+
 
     // Nested class for data model
     static class SensorData {
