@@ -8,7 +8,7 @@ This project is an **8-week practical roadmap** designed to build a distributed 
 - Demonstrate ability to design, deploy, and operate scalable data processing systems.
 
 ## Key Components
-- **Event Generation**: Python scripts simulate IoT devices producing random sensor data (temperature, humidity, etc.).
+- **Event Generation**: Java scripts simulate IoT devices producing random sensor data (temperature, humidity, etc.).
 - **Messaging Layer**: Apache Kafka handles event streaming between producers and consumers.
 - **Data Processing**: Apache Flink performs real-time windowed aggregation of sensor data.
 - **Storage**: Raw data is stored in MongoDB, while aggregated metrics are saved in PostgreSQL.
